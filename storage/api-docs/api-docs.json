@@ -18,11 +18,11 @@
         "/v1/city/add": {
             "post": {
                 "tags": [
-                    "storeCity"
+                    "City"
                 ],
                 "summary": "Store City Data",
-                "description": "Returns list of city along with weather",
-                "operationId": "storeCity",
+                "description": "Returns added city",
+                "operationId": "Add new city",
                 "parameters": [
                     {
                         "name": "name",
@@ -67,7 +67,7 @@
         "/v1/fetch-city-weather": {
             "get": {
                 "tags": [
-                    "City weather"
+                    "City"
                 ],
                 "summary": "Get list of city weather",
                 "description": "Returns list of city along with weather",

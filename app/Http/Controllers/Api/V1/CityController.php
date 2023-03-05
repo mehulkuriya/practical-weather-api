@@ -55,10 +55,10 @@ class CityController extends Controller
      /**
      * @OA\POST(
      *      path="/v1/city/add",
-     *      operationId="storeCity",
-     *      tags={"storeCity"},
+     *      operationId="Add new city",
+     *      tags={"City"},
      *      summary="Store City Data",
-     *      description="Returns list of city along with weather",
+     *      description="Returns added city",
      *      
      *      *@OA\Parameter(
      *         name="name",
@@ -122,7 +122,7 @@ class CityController extends Controller
      * @OA\Get(
      *      path="/v1/fetch-city-weather",
      *      operationId="fetch-city-weather",
-     *      tags={"City weather"},
+     *      tags={"City"},
      *      summary="Get list of city weather",
      *      description="Returns list of city along with weather",
      *      
