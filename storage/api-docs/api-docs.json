@@ -1,0 +1,109 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Weather Api documentation",
+        "description": "Weather Api documentation",
+        "contact": {
+            "email": "kuriyamehul@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/api/",
+            "description": "Demo API Server"
+        }
+    ],
+    "paths": {
+        "/v1/city/add": {
+            "post": {
+                "tags": [
+                    "storeCity"
+                ],
+                "summary": "Store City Data",
+                "description": "Returns list of city along with weather",
+                "operationId": "storeCity",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "City name parameters",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "Ahmedabad"
+                    },
+                    {
+                        "name": "state_uuid",
+                        "in": "query",
+                        "description": "state_uuid",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "7cb5fb96-4a32-4793-abe2-0c1c9f781ea2"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Content"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/v1/fetch-city-weather": {
+            "get": {
+                "tags": [
+                    "City weather"
+                ],
+                "summary": "Get list of city weather",
+                "description": "Returns list of city along with weather",
+                "operationId": "fetch-city-weather",
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "query",
+                        "description": "City name parameters",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Weather Api",
+            "description": "API Endpoints of Weather Api"
+        }
+    ]
+}
