@@ -51,7 +51,7 @@ You can now access the server at http://127.0.0.1:8000/
 
 Open the CountryStateCitySeeder and set the property values as per your requirement
 
-    database/seeds/CountryStateCitySeeder.php
+    database/seeders/CountryStateCitySeeder.php
 
 Run the database seeder and you're done
 
